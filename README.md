@@ -17,6 +17,13 @@ X |> Y # An occurence of X causes Y
 X <| Y # An occurrence of Y causes X
 ```
 
+Additionally properties may be distributive, no standard order of operations but make sure a reader can infer what you would like to convey easily, semantic variable names are too some extent more important than the notation
+
+```{oblang}
+(x, y, z)(Vector) := R
+(r, theta)(Polar) := R, 0 <= R <= 2pi
+```
+
 We may define various programs through observations without specifying their internals, only properties that we would like to observe of the final program. For example,
 
 ```{oblang}
