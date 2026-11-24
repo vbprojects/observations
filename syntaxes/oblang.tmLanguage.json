@@ -1,0 +1,16 @@
+{
+  "scopeName": "source.oblang",
+  "patterns": [
+    { "name": "comment.line.number-sign.oblang", "match": "#.*$" },
+    { "name": "keyword.operator.logical.oblang", "match": "\\b(?:iff|is)\\b" },
+    { "name": "constant.language.oblang", "match": "\\b(?:True|False|None)\\b" },
+    { "name": "keyword.operator.oblang", "match": ":=|:<|\\|>|<\\||<=|>=|[|:<>=]" },
+    { "name": "constant.numeric.oblang", "match": "[0-9]+(?:\\.[0-9]+)?" },
+    { "name": "entity.name.function.oblang", "match": "[A-Za-z_][A-Za-z_0-9]*'*(?=\\s*\\()" },
+    { "name": "entity.name.type.oblang", "match": "[A-Z][A-Za-z_0-9]*'*" },
+    { "name": "variable.other.oblang", "match": "[a-z_][A-Za-z_0-9]*'*" },
+    { "name": "punctuation.separator.oblang", "match": "," },
+    { "name": "punctuation.section.group.begin.oblang", "match": "[(\\[]" },
+    { "name": "punctuation.section.group.end.oblang", "match": "[)\\]]" }
+  ]
+}

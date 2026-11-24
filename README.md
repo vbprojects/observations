@@ -39,3 +39,14 @@ It doesn't specify what happens if a user does put a value into the list at an i
 
 Keep in mind that the notation does not assume a particular programming paradigm, the List must have a length but this could be a function which iterates over a collection, could be a field in an object, or could be packaged in a Tuple alongside the List representation as an array. More to the point that we may never actually implement a generic List that must be parameterized by any type. In subsequent observations we may only need one that is defined for Integers and Floats and thus only need to observe a FloatList or an IntegerList if the implementer chooses to program in that manner. In the future we may consider this to be a precursor or "napkin math" to developing programs in a full formalized language like Lean.
 
+
+## VS Code syntax highlighting
+
+With Node.js 22 or newer installed, run the following from the repository root to package and install the extension.
+
+```sh
+npx --yes @vscode/vsce@3 package
+code --install-extension oblang-0.1.0.vsix
+```
+
+Open a `.oblang` file or select **Observations** from VS Code's language mode menu. In Markdown source, use a fenced block labeled `{oblang}` (as above) or `oblang`.
