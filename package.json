@@ -1,0 +1,24 @@
+{
+  "name": "oblang",
+  "displayName": "Observations Syntax Highlighting",
+  "description": "Highlight Observations notation in .oblang files and Markdown code fences.",
+  "version": "0.1.0",
+  "publisher": "vbprojects",
+  "engines": { "vscode": "^1.75.0" },
+  "categories": ["Programming Languages"],
+  "repository": { "type": "git", "url": "https://github.com/vbprojects/observations.git" },
+  "contributes": {
+    "languages": [
+      { "id": "oblang", "aliases": ["Observations", "oblang"], "extensions": [".oblang"] }
+    ],
+    "grammars": [
+      { "language": "oblang", "scopeName": "source.oblang", "path": "./syntaxes/oblang.tmLanguage.json" },
+      {
+        "scopeName": "markdown.oblang.fences",
+        "path": "./syntaxes/markdown.tmLanguage.json",
+        "injectTo": ["text.html.markdown"],
+        "embeddedLanguages": { "meta.embedded.block.oblang": "oblang" }
+      }
+    ]
+  }
+}

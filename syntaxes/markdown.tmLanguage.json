@@ -1,0 +1,30 @@
+{
+  "scopeName": "markdown.oblang.fences",
+  "injectionSelector": "L:text.html.markdown -markup.fenced_code.block.markdown -markup.inline.raw -comment -meta.embedded",
+  "patterns": [
+    {
+      "name": "markup.fenced_code.block.markdown",
+      "begin": "(^|\\G)(\\s*)((`|~)\\4{2,})[ \\t]*(\\{oblang\\}|oblang)[ \\t]*$",
+      "beginCaptures": {
+        "3": {
+          "name": "punctuation.definition.markdown"
+        },
+        "5": {
+          "name": "fenced_code.block.language.markdown"
+        }
+      },
+      "end": "(^|\\G)(\\2|\\s{0,3})(\\3\\4*)[ \\t]*$",
+      "endCaptures": {
+        "3": {
+          "name": "punctuation.definition.markdown"
+        }
+      },
+      "contentName": "meta.embedded.block.oblang",
+      "patterns": [
+        {
+          "include": "source.oblang"
+        }
+      ]
+    }
+  ]
+}
